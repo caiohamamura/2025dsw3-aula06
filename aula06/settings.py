@@ -24,12 +24,14 @@ MEDIA_ROOT = BASE_DIR / 'uploads'
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-f^)l3$$v*97u%xtb&-xxf%i%k-#fjtx+55=^=qbxkv78m=*w8*'
+SECRET_KEY = os.environ['DJANGO_SECRET']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'two025dsw3-aula06.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://two025dsw3-aula06.onrender.com']
+
 
 
 # Application definition
