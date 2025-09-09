@@ -1,0 +1,18 @@
+#links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+#links > li > a {
+    text-decoration: none;
+    background-color: tomato;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    color:white;
+}
+
+#links > li > a:hover {
+    background-color: blue;
+}

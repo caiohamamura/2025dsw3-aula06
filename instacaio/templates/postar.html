@@ -1,0 +1,13 @@
+{% extends "mestre.html" %}
+
+{% block titulo %}
+Postar
+{% endblock titulo %}
+
+{% block conteudo %}
+<form action="{% url 'postar' %}" method="POST">
+    {% csrf_token %}
+    {{ formulario }}
+    <button type="submit">Enviar</button>
+</form>
+{% endblock conteudo %}
