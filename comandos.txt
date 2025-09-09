@@ -12,6 +12,15 @@ python manage.py startapp instacaio
 python manage.py createsuperuser
 python manage.py makemigrations
 python manage.py migrate
-python manage.py runserver 9000
+python manage.py runserver 9090
 
 echo "pillow" >> requirements.txt
+
+
+git init
+echo ".venv" >> .gitignore
+git config user.name "usuario"
+git config user.email "usuario@teste.com"
+
+git add .
+git commit -a -m "Adicionei comandos git"

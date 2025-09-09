@@ -14,5 +14,15 @@
 }
 
 #links > li > a:hover {
-    background-color: blue;
+    background-color: black;
+}
+
+#todos_posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.postagem > img {
+    max-width: 365px;
 }

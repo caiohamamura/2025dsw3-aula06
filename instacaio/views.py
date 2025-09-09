@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+from . import models
 from instacaio.forms import PostForm
 
 # Create your views here.
@@ -10,7 +11,6 @@ def controle(req):
         'variavel': range(10)
     })
 
-
 def postar(req):
     if req.method == "POST":
         form = PostForm(req.POST, req.FILES)
@@ -21,3 +21,9 @@ def postar(req):
         form = PostForm()
 
     return render(req, "postar.html", {"formulario": form})
+
+def ver_postagens(req):
+    todos_posts = models.Post.objects.filter(aprovado=True).all()
+    return render(req, 'listar_posts.html', {
+        'postagens': todos_posts
+    })
